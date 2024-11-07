@@ -23,6 +23,24 @@ contract MyContract {
     MyStruct public myStruct = MyStruct(1,"aaa");
 
 
+
+    //Arrays
+    uint[] public array = [1,2,3];
+
+    string[] public sArray = ["a", "b"];
+
+    uint[][] public matrix = [[1,2,3], [4,5,6]];
+
+
+    function addValue(uint value) public {
+        array.push(value);
+    }
+
+    function getlenth() public view returns(uint) {
+        return array.length;
+    }
+
+
     // Local Varibles ( in a function )
     function getValue() pure public returns(uint) {
         // pure = dont modify the block chain
